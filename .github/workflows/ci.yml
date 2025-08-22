@@ -10,6 +10,6 @@ jobs:
       greeting: hello
     steps:
       - name: "Say my name u goddam right"
-        run: echo "$greeting $first_name is using $cloud using priject id $PROJECT_ID"
+        run: echo "$greeting $first_name is using $cloud using priject id ${{ vars.project_id }}!"
         env:
           first_name: srikanth
