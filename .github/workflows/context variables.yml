@@ -13,4 +13,5 @@ jobs:
           echo "Repositort Name : ${{ github.repository }}"
           echo "Workflow name : ${{ github.workflow }}"
           echo "trigger by : ${{ github.triggering_actor }}"
+          echo " using which cloud $cloud"
     
