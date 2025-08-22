@@ -14,8 +14,11 @@ jobs:
       - ubuntu-latest
     steps:
       - name: "adding number"
-        id: sum
-        run: echo "sum=${{ inputs.number1 }} + ${{ inputs.number2 }}"
+        id: sum 
+        run: |
+        result=$(( ${{ inputs.number1 }} + ${{ inputs.number2 }} ))
+        echo "sum=$result"
+        
       - name: "display sum"
         run: echo "the sum of ${{ inputs.number1 }} and ${{ inputs.number2 }} is equal to ${{ steps.sum.outputs.sum }}"
       
