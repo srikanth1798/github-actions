@@ -4,10 +4,10 @@ on:
     inputs:
       number1:
         description: "first number"
-        default: '2'
+        default: '0'
       number2:
         description: "second number"
-        default: '3'
+        default: '0'
 
 jobs:
   builds:
