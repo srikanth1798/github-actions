@@ -5,7 +5,12 @@ env:
   cloud: aws-cloud
 jobs:
   builds:
-    run-on:
+    runs-on:
       - ubuntu-latest
-      
+    steps:
+      - name: "checking context variables"
+        run: |
+          echo "Repositort Name : ${{ github.repository }}"
+          echo "Workflow name : ${{ github.workflow }}"
+          echo "trigger by : ${{ github.triggering_actor }}"
     
