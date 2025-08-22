@@ -1,1 +1,20 @@
-sdvjhghsvfmhvsjchjchvmm
+name: testing
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+env:
+  cloud: aws-cloud
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    env:
+      greeting: hello
+    steps:
+      - name: "Say my name u goddam right"
+        run: echo "$greeting $first_name is using $cloud"
+        env:
+          first_name: srikanth
