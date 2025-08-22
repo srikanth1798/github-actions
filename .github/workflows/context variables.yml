@@ -1,1 +1,11 @@
-
+name: context variable
+on:
+  workflow_dispatch
+env:
+  cloud: aws-cloud
+jobs:
+  builds:
+    run-on:
+      - ubuntu-latest
+      
+    
